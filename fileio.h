@@ -31,6 +31,7 @@ public:
     FileIO(QString str);
     void buildCharTable();
     void browseHashTable();
+    inline QMap<char,int>* getMap(){return map;}
 
 private:
     QString filename;

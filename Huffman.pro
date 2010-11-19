@@ -17,10 +17,12 @@ TEMPLATE = app
 SOURCES += main.cpp \
     fileio.cpp \
     nodetree.cpp \
-    orderedlist.cpp
+    orderedlist.cpp \
+    huffmancompression.cpp
 
 HEADERS += \
     fileio.h \
     nodetree.h \
     orderedlist.h \
-    Constants.h
+    Constants.h \
+    huffmancompression.h

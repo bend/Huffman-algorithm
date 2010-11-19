@@ -18,13 +18,16 @@
 *   along with VClient/VServer.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <iostream>
-using namespace std;
+#ifndef HUFFMANCOMPRESSION_H
+#define HUFFMANCOMPRESSION_H
+#include "fileio.h"
+#include "orderedlist.h"
 
-
-int main(int argc, char *argv[])
+class HuffmanCompression
 {
+public:
+    HuffmanCompression();
+    void compress();
+};
 
-
-    return 0;
-}
+#endif // HUFFMANCOMPRESSION_H

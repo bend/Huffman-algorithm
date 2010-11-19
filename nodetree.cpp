@@ -20,6 +20,7 @@
 
 #include "nodetree.h"
 
-NodeTree::NodeTree(unsigned short type)
-{
+NodeTree::NodeTree(char c,unsigned int weight){
+    this->character = c;
+    this->weight = weight;
 }

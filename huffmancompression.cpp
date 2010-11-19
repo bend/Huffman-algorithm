@@ -18,13 +18,17 @@
 *   along with VClient/VServer.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <iostream>
-using namespace std;
+#include "huffmancompression.h"
 
-
-int main(int argc, char *argv[])
+HuffmanCompression::HuffmanCompression()
 {
-
-
-    return 0;
 }
+
+void HuffmanCompression::compress(){
+    FileIO f("");
+    f.buildCharTable();
+    OrderedList list;
+    list.insertMap(f.getMap());
+    buildTree();
+}
+

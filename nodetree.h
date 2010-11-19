@@ -25,16 +25,20 @@ class NodeTree
 {
 public:
     NodeTree(unsigned short type , NodeTree *root,NodeTree *left, NodeTree *right);
-    NodeTree(unsigned short type);
+    NodeTree(char c,unsigned int weight);
+    inline NodeTree(){this->weight=0;}
     inline void setLeft(NodeTree *left){this->left = left;}
     inline void setRight(NodeTree *right){this->right = right;}
     inline void setRoot(NodeTree *root) {this->root = root;}
     inline void setType(unsigned short type){this->type = type;}
+    inline unsigned int  getweight(){return weight;}
 private:
     NodeTree *left;
     NodeTree *right;
     NodeTree *root;
     unsigned short type;
+    unsigned int weight;
+    char character;
 };
 
 #endif // NODETREE_H

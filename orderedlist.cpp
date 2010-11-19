@@ -19,7 +19,34 @@
 */
 
 #include "orderedlist.h"
+#include <QDebug>
 
 OrderedList::OrderedList()
 {
+    tabNodes = new QList<NodeTree*>;
 }
+
+void OrderedList::insert(NodeTree *node){
+    if(tabNodes->size()==0){
+        tabNodes->insert(0,node);
+        return;
+    }
+    for(int i=0;i<tabNodes->size();i++){
+        if(node->getweight()<tabNodes->value(i)->getweight()){
+            tabNodes->insert(i,node);
+            return;
+        }
+    }
+    tabNodes->append(node);
+}
+
+void OrderedList::insertMap(QMap<char,int> *map){
+    QMapIterator<char,int> it(*map);
+    while(it.hasNext()){
+        it.next();
+        NodeTree *n = new NodeTree(it.key(),it.value());
+        insert(n);
+    }
+
+}
+

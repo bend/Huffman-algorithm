@@ -20,11 +20,18 @@
 
 #ifndef ORDEREDLIST_H
 #define ORDEREDLIST_H
+#include <nodetree.h>
+#include <QList>
+#include <QMap>
 
 class OrderedList
 {
 public:
     OrderedList();
+    void insert(NodeTree *node);
+    void insertMap(QMap<char,int> *map);
+private:
+    QList<NodeTree*> *tabNodes;
 };
 
 #endif // ORDEREDLIST_H
